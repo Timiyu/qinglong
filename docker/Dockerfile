@@ -19,7 +19,6 @@ WORKDIR ${QL_DIR}
 RUN set -x \
     && sed -i 's@http://archive.ubuntu.com/ubuntu/@http://mirrors.aliyun.com/ubuntu/@g' /etc/apt/sources.list \
     && apt-get update -qqy \
-    && apt-get upgrade -y \
     && apt-get install -y python3 \
                           python3-dev \
                           python3-pip \
