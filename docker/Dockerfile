@@ -83,7 +83,6 @@ RUN set -x \
     && git clone -b ${QL_BRANCH} https://github.com/${QL_MAINTAINER}/qinglong-static.git /static \
     && mkdir -p ${QL_DIR}/static \
     && cp -rf /static/* ${QL_DIR}/static \
-    && rm -rf /static \
-    && service cron start
+    && rm -rf /static
     
 ENTRYPOINT ["./docker/docker-entrypoint.sh"]
