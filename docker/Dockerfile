@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 ARG QL_MAINTAINER="Timiyu"
 LABEL maintainer="${QL_MAINTAINER}"
-ARG QL_URL=git://github.com/${QL_MAINTAINER}/qinglong.git
+ARG QL_URL=https://github.com/${QL_MAINTAINER}/qinglong.git
 ARG QL_BRANCH=develop
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -80,7 +80,7 @@ RUN set -x \
     && rm -rf /root/.local/share/pnpm/store \
     && rm -rf /root/.cache \
     && rm -rf /root/.npm \
-    && git clone -b ${QL_BRANCH} git://github.com/${QL_MAINTAINER}/qinglong-static.git /static \
+    && git clone -b ${QL_BRANCH} https://github.com/${QL_MAINTAINER}/qinglong-static.git /static \
     && mkdir -p ${QL_DIR}/static \
     && cp -rf /static/* ${QL_DIR}/static \
     && rm -rf /static
