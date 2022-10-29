@@ -3,7 +3,7 @@ FROM ubuntu:latest
 ARG QL_MAINTAINER="Timiyu"
 LABEL maintainer="${QL_MAINTAINER}"
 ARG QL_URL=https://github.com/${QL_MAINTAINER}/qinglong.git
-ARG QL_BRANCH=master
+ARG QL_BRANCH=develop
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PNPM_HOME=/root/.local/share/pnpm \
